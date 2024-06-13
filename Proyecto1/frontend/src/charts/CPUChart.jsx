@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Pie ,Doughnut} from 'react-chartjs-2';
+import { Pie,Doughnut } from 'react-chartjs-2';
 import 'chart.js/auto';
 
 
-function RamChart() {
+function CPUChart() {
     const [chartData, setChartData] = useState({
         labels: ['USO', 'LIBRE'],
         datasets: [{
@@ -17,26 +17,24 @@ function RamChart() {
                 'rgba(255, 99, 32, 1)', // Orange
                 'rgba(255, 193, 7, 1)'  // Yellow
             ],
-            borderWidth: 5
+            borderWidth: 2
         }]
     });
 
-    const [totalRam, setTotalRam] = useState(0);
+    const [numCPU, setNumCPU] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            fetch("http://localhost:8080/api/ram")
-                //fetch("/api/ram")
+             fetch("http://localhost:8080/api/cpu")
+            //fetch("/api/cpu")
                 .then(response => response.json())
                 .then(data => {
-                    const total = data.total;
                     const used = data.used;
                     const notused = data.notused;
-
-                    setTotalRam(total);
+                    setNumCPU(data.num_cpu)
                     setChartData(prevChartData => ({
                         ...prevChartData,
-                        labels: [`USO ${used.toFixed(2)}% (${(total * used / 100000).toFixed(2)}GB)`, `LIBRE ${notused.toFixed(2)}% (${(notused * total / 100000).toFixed(2)}GB)`],
+                        labels: [`USO ${used.toFixed(2)}%`, `LIBRE ${notused.toFixed(2)}%`],
                         datasets: [{
                             ...prevChartData.datasets[0],
                             data: [used, notused],
@@ -53,8 +51,8 @@ function RamChart() {
     return (
         <>
             <div>
-                <h2 style={{ margin: 0, textAlign: 'center', color: '#e0e0d1' }}>Memoria RAM</h2>
-                <h2 style={{ margin: 0, textAlign: 'center', color: '#e0e0d1' }}> Total {(totalRam / 1000).toFixed(2)} GB</h2>
+                <h2 style={{ margin: 0, textAlign: 'center', color: '#e0e0d1' }}>CPU </h2>
+                <h2 style={{ margin: 0, textAlign: 'center', color: '#e0e0d1' }}> {numCPU} CPUs disponibles </h2>
                 <div id='divChart' style={{ maxHeight: '700px', display: 'flex', justifyContent: 'center' }}>
                     <Doughnut data={chartData} options={{ maintainAspectRatio: true }} />
                 </div>
@@ -63,4 +61,4 @@ function RamChart() {
     )
 };
 
-export default RamChart;
+export default CPUChart;
