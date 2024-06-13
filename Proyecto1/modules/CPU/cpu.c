@@ -87,15 +87,15 @@ static struct proc_ops operaciones =
 //Funcion a ejecuta al insertar el modulo en el kernel con insmod
 static int _insert(void)
 {
-    proc_create("cpu_201700381", 0, NULL, &operaciones);
-    printk(KERN_INFO "Nery Oswaldo Jimenez Contreras\n");
+    proc_create("cpu_so1_1s2024", 0, NULL, &operaciones);
+    printk(KERN_INFO "1s2024\n");
     return 0;
 }
 
 //Funcion a ejecuta al remover el modulo del kernel con rmmod
 static void _remove(void)
 {
-    remove_proc_entry("cpu_201700381", NULL);
+    remove_proc_entry("cpu_so1_1s2024", NULL);
     printk(KERN_INFO "EV Junio 2024\n");
 }
 
