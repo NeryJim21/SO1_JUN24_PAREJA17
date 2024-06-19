@@ -8,9 +8,33 @@ import (
 	"strings"
 )
 
+type CPUDataReturn struct {
+	Used      float64   `json:"used"`
+	Notused   float64   `json:"notused"`
+	Processes []Process `json:"processes"`
+}
+
+type ProcessChild struct {
+	Pid    int    `json:"pid"`
+	Name   string `json:"name"`
+	State  int    `json:"state"`
+	Father int    `json:"pidPadre"`
+}
+
+type Process struct {
+	Pid   int            `json:"pid"`
+	Name  string         `json:"name"`
+	User  int            `json:"user"`
+	State int            `json:"state"`
+	Ram   int            `json:"ram"`
+	Child []ProcessChild `json:"child"`
+}
+
 type CPUData struct {
-	Used    float64 `json:"used"`
-	Notused float64 `json:"notused"`
+	CpuTotal  float64   `json:"cpu_total"`
+	Percent   float64   `json:"cpu_porcentaje"`
+	NumCpu    int       `json:"num_cpu"`
+	Processes []Process `json:"processes"`
 }
 
 // getCPUUsage executes the mpstat command and returns the CPU usage percentage
@@ -57,11 +81,30 @@ func GetCPUData(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	free := 100 - usage
-	data := CPUData{
+	data := CPUDataReturn{
 		Used:    usage,
 		Notused: free,
 	}
 
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(data)
+}
+
+func GetProcesses(w http.ResponseWriter, r *http.Request) {
+	cmd := exec.Command("sh", "-c", "cat /proc/cpu_so1_jun2024")
+	out, err := cmd.CombinedOutput()
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return // No se retorna ningún valor, solo se maneja el error.
+	}
+
+	var data CPUData
+	err = json.Unmarshal(out, &data)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return // Al igual que arriba, manejamos el error.
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(data.Processes)
 }

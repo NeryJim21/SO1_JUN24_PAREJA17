@@ -41,15 +41,10 @@ func main() {
 
 	http.HandleFunc("/api/ram", Logger(enableCORS(GetDataRam)))
 	http.HandleFunc("/api/cpu", Logger(enableCORS(GetCPUData)))
-	/* http.HandleFunc("/api/cpu-processes", Logger(enableCORS(GetProcesses)))
-	 */
-	/* 	http.HandleFunc("/api/process-current", Logger(enableCORS(GetCurrentProcess)))
-	   	http.HandleFunc("/api/process-start", Logger(enableCORS(StartProcess)))
-	   	http.HandleFunc("/api/process-stop", Logger(enableCORS(StopProcess)))
-	   	http.HandleFunc("/api/process-resume", Logger(enableCORS(ResumeProcess)))
-	   	http.HandleFunc("/api/process-kill", Logger(enableCORS(KillProcess)))
-	*/
-	//port := "8080"
+	http.HandleFunc("/api/cpu-processes", Logger(enableCORS(GetProcesses)))
+	http.HandleFunc("/api/process-start", Logger(enableCORS(StartProcess)))
+	http.HandleFunc("/api/process-kill", Logger(enableCORS(KillProcess)))
+
 	port := os.Getenv("PORT_HOST")
 	fmt.Println("Servidor escuchando en el puerto", port)
 
