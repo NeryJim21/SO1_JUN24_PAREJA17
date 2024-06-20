@@ -2,7 +2,9 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"math"
+	"monitoreo-api/Controller"
 	"net/http"
 	"os/exec"
 )
@@ -33,14 +35,14 @@ func GetDataRam(w http.ResponseWriter, r *http.Request) {
 	data.Used = math.Round(data.Used*10000/total) / 100
 	data.Notused = 100 - data.Used
 
-	//go InsertRecord(true, data.Notused, data.Used)
+	// Guardando data en DB
+	err = Controller.InsertData("ram", int(data.Used))
+	if err != nil {
+		fmt.Println("Error al insertar datos en la base de datos:", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(data)
 }
-
-/* func RamRecords(w http.ResponseWriter, r *http.Request) {
-	lista := GetRecords(true)
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(lista)
-} */

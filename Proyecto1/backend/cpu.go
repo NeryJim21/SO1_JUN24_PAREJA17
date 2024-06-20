@@ -2,6 +2,8 @@ package main
 
 import (
 	"encoding/json"
+	"monitoreo-api/Controller"
+	"monitoreo-api/Model"
 	"net/http"
 	"os/exec"
 	"strconv"
@@ -71,6 +73,13 @@ func getCPUUsage() (float64, error) {
 
 	// Calculate the usage percentage
 	usage := 100 - idle
+
+	// Guardando data en DB
+	err = Controller.InsertData("cpu", int(usage))
+	if err != nil {
+		return 0, err
+	}
+
 	return usage, nil
 }
 
@@ -105,6 +114,19 @@ func GetProcesses(w http.ResponseWriter, r *http.Request) {
 		return // Al igual que arriba, manejamos el error.
 	}
 
+	for _, process := range data.Processes {
+		// Adaptar la estructura Process a ProcessData
+		processData := Model.ProcessData{
+			PID:    process.Pid,
+			Name:   process.Name,
+			Status: process.State,
+		}
+		err := Controller.InsertProcessData("processes", processData)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+	}
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(data.Processes)
 }

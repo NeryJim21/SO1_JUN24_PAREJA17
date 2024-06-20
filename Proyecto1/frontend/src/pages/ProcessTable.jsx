@@ -6,7 +6,7 @@ function ProcessTable() {
     const [pid, setPid] = useState(0);
 
     const getDatos = () => {
-        fetch("http://localhost:8080/api/cpu-processes")
+        fetch("/api/cpu-processes")
             .then(response => response.json())
             .then(data => {
                 const processes = data;
@@ -36,7 +36,7 @@ function ProcessTable() {
     };
 
     const createNewProcess = () => {
-        fetch("http://localhost:8080/api/process-start")
+        fetch("/api/process-start")
             .then(response => response.json())
             .then(data => {
                 setPid(data.pid);
@@ -48,7 +48,7 @@ function ProcessTable() {
     };
 
     const killTheProcess = (pid) => {
-        fetch(`http://localhost:8080/api/process-kill?pid=${pid}`)
+        fetch(`/api/process-kill?pid=${pid}`)
             .then(response => response.json())
             .then(data => {
                 getDatos();  // Actualizar la lista de procesos después de matar uno

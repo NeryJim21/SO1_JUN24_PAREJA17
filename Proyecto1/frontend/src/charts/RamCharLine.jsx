@@ -45,8 +45,7 @@ function RamChartLine() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            fetch("http://localhost:8080/api/ram")
-            //fetch("/api/ram")
+            fetch("/api/ram")
                 .then(response => response.json())
                 .then(() => {
                 })

@@ -45,8 +45,7 @@ function CpuChartLine() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            fetch("http://localhost:8080/api/cpu")
-            //fetch("/api/cpu")
+            fetch("/api/cpu")
                 .then(response => response.json())
                 .then(() => {
                 })

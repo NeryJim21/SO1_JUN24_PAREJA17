@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"monitoreo-api/Database"
 	"net/http"
 	"os"
 	"time"
@@ -37,6 +39,10 @@ func main() {
 	err := godotenv.Load()
 	if err != nil {
 		fmt.Println(("Error al cargar las variables de entorno"))
+	}
+
+	if err2 := Database.Connect(); err2 != nil {
+		log.Fatal("Error en", err2)
 	}
 
 	http.HandleFunc("/api/ram", Logger(enableCORS(GetDataRam)))
