@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: so1-proyecto2-ingress
+  namespace: project
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: 34.123.115.39.nip.io
+      http:
+        paths:
+          - pathType: Prefix
+            backend:
+              service:
+                name: grpc-client-service
+                port:
+                  number: 3000
+            path: /insert
