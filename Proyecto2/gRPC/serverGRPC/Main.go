@@ -4,6 +4,8 @@ import (
 	"context"
 	"fmt"
 	"net"
+	"serverGRPC/kafka"
+	"serverGRPC/model"
 	pb "serverGRPC/server"
 
 	"google.golang.org/grpc"
@@ -13,20 +15,17 @@ type server struct {
 	pb.UnimplementedGetInfoServer
 }
 
-type Data struct {
-	Texto string
-	Pais  string
-}
-
 func (s *server) ReturnInfo(ctx context.Context, in *pb.RequestId) (*pb.ReplyInfo, error) {
-	tweet := Data{
+	tweet := model.Data{
 		Texto: in.GetTexto(),
 		Pais:  in.GetPais(),
 	}
 
 	fmt.Println(tweet)
 
-	return &pb.ReplyInfo{Info: "Hola cliente, recibí el album"}, nil
+	kafka.Produce(tweet)
+
+	return &pb.ReplyInfo{Info: "Hola cliente, recibí el tweet"}, nil
 }
 
 func main() {
