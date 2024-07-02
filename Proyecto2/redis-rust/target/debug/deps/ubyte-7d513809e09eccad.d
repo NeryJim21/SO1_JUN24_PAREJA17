@@ -1,0 +1,11 @@
+/home/n21/Documentos/USAC/SO1/EVJ2024/LAB/PROYECTOS/repo/SO1_JUN24_PAREJA17/Proyecto2/redis-rust/target/debug/deps/libubyte-7d513809e09eccad.rmeta: /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/lib.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/arithmetic.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/byte_unit.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/parse.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/ser_de.rs
+
+/home/n21/Documentos/USAC/SO1/EVJ2024/LAB/PROYECTOS/repo/SO1_JUN24_PAREJA17/Proyecto2/redis-rust/target/debug/deps/libubyte-7d513809e09eccad.rlib: /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/lib.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/arithmetic.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/byte_unit.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/parse.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/ser_de.rs
+
+/home/n21/Documentos/USAC/SO1/EVJ2024/LAB/PROYECTOS/repo/SO1_JUN24_PAREJA17/Proyecto2/redis-rust/target/debug/deps/ubyte-7d513809e09eccad.d: /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/lib.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/arithmetic.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/byte_unit.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/parse.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/ser_de.rs
+
+/home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/lib.rs:
+/home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/arithmetic.rs:
+/home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/byte_unit.rs:
+/home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/parse.rs:
+/home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ubyte-0.10.4/src/ser_de.rs:

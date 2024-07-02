@@ -1,0 +1,10 @@
+/home/n21/Documentos/USAC/SO1/EVJ2024/LAB/PROYECTOS/repo/SO1_JUN24_PAREJA17/Proyecto2/redis-rust/target/debug/deps/libasync_stream-0c9d94cc08b503ff.rmeta: /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/lib.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/async_stream.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/next.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/yielder.rs
+
+/home/n21/Documentos/USAC/SO1/EVJ2024/LAB/PROYECTOS/repo/SO1_JUN24_PAREJA17/Proyecto2/redis-rust/target/debug/deps/libasync_stream-0c9d94cc08b503ff.rlib: /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/lib.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/async_stream.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/next.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/yielder.rs
+
+/home/n21/Documentos/USAC/SO1/EVJ2024/LAB/PROYECTOS/repo/SO1_JUN24_PAREJA17/Proyecto2/redis-rust/target/debug/deps/async_stream-0c9d94cc08b503ff.d: /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/lib.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/async_stream.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/next.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/yielder.rs
+
+/home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/lib.rs:
+/home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/async_stream.rs:
+/home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/next.rs:
+/home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-stream-0.3.5/src/yielder.rs:

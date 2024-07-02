@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"time"
 
 	"github.com/google/uuid"
 	"github.com/segmentio/kafka-go"
@@ -19,6 +20,9 @@ func processEvent(event []byte) {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	// Agregar la fecha y hora actual
+	data.Timestamp = time.Now()
 
 	if err := Database.Connect(); err != nil {
 		log.Fatal("Error en", err)
@@ -36,7 +40,7 @@ func processEvent(event []byte) {
 func main() {
 	topic := "mytopic"
 	r := kafka.NewReader(kafka.ReaderConfig{
-		Brokers:     []string{"kafka/my-cluster-kafka-0:9092"}, // my-cluster-kafka-0.my-cluster-kafka-brokers.kafka.svc
+		Brokers:     []string{"my-cluster-kafka-0.my-cluster-kafka-brokers.kafka.svc:9092"}, // my-cluster-kafka-0.my-cluster-kafka-brokers.kafka.svc
 		Topic:       topic,
 		Partition:   0,
 		MinBytes:    10e3,

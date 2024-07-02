@@ -1,0 +1,10 @@
+/home/n21/Documentos/USAC/SO1/EVJ2024/LAB/PROYECTOS/repo/SO1_JUN24_PAREJA17/Proyecto2/redis-rust/target/debug/deps/libuncased-7e9f8e87b5a2f218.rmeta: /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/lib.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/owned.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/borrowed.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/as_uncased.rs
+
+/home/n21/Documentos/USAC/SO1/EVJ2024/LAB/PROYECTOS/repo/SO1_JUN24_PAREJA17/Proyecto2/redis-rust/target/debug/deps/libuncased-7e9f8e87b5a2f218.rlib: /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/lib.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/owned.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/borrowed.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/as_uncased.rs
+
+/home/n21/Documentos/USAC/SO1/EVJ2024/LAB/PROYECTOS/repo/SO1_JUN24_PAREJA17/Proyecto2/redis-rust/target/debug/deps/uncased-7e9f8e87b5a2f218.d: /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/lib.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/owned.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/borrowed.rs /home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/as_uncased.rs
+
+/home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/lib.rs:
+/home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/owned.rs:
+/home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/borrowed.rs:
+/home/n21/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/as_uncased.rs:

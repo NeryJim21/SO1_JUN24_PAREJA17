@@ -14,7 +14,7 @@ func Produce(value model.Data) {
 	topic := "mytopic"
 	partition := 0
 
-	conn, err := kafka.DialLeader(context.Background(), "tcp", "kafka/my-cluster-kafka-0:9092", topic, partition) // my-cluster-kafka-0.my-cluster-kafka-brokers.kafka.svc
+	conn, err := kafka.DialLeader(context.Background(), "tcp", "my-cluster-kafka-0.my-cluster-kafka-brokers.kafka.svc:9092", topic, partition) // my-cluster-kafka-0.my-cluster-kafka-brokers.kafka.svc
 	if err != nil {
 		panic(err)
 	}
