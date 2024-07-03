@@ -28,7 +28,7 @@ func sendToRust(data *Data) {
 		log.Fatal(err)
 	}
 
-	res, err := http.Post("http://localhost:8000/set", "application/json", bytes.NewBuffer(jsonData))
+	res, err := http.Post("http://redis-deployment:8000/set", "application/json", bytes.NewBuffer(jsonData))
 	if err != nil {
 		log.Fatal(err)
 	}
